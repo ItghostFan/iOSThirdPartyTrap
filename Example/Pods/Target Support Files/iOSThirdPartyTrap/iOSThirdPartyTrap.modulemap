@@ -1,6 +1,0 @@
-framework module iOSThirdPartyTrap {
-  umbrella header "iOSThirdPartyTrap-umbrella.h"
-
-  export *
-  module * { export * }
-}
