@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "iOSThirdPartyTrap/NSObject+ReactiveCocoa.h"
+
 @interface ViewController ()
 
 @end
@@ -19,6 +21,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self racObserveSelector:@selector(viewDidLayoutSubviews) object:self next:^(RACTuple *tuple) {
+        NSLog(@"DidLayoutSbuViews!");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

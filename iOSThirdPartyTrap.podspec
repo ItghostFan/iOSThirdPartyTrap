@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'iOSThirdPartyTrap'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of iOSThirdPartyTrap.'
+  s.summary          = 'Third party library wrap.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Resolve some bug or provide convenient wrap source of third party library.
                        DESC
 
   s.homepage         = 'https://github.com/ItghostFan/iOSThirdPartyTrap'
@@ -31,11 +31,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = "10.9"
 
-  s.source_files = 'iOSThirdPartyTrap/Classes/*.{h,m}'
+  # s.source_files = 'iOSThirdPartyTrap/Classes/*.{h,m}'
 
   s.subspec 'ReactiveCocoa' do |reactivecocoa|
     reactivecocoa.source_files = 'iOSThirdPartyTrap/Classes/ReactiveCocoa/*.{h,m}'
   end
+
+  s.dependency 'ReactiveCocoa', '2.5.0'
 
   # s.resource_bundles = {
   #   'iOSThirdPartyTrap' => ['iOSThirdPartyTrap/Assets/*.png']

@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'iOSThirdPartyTrap_Example' do
   pod 'iOSThirdPartyTrap', :path => '../'
+  pod 'ReactiveCocoa', '2.5.0'
 
   target 'iOSThirdPartyTrap_Tests' do
     inherit! :search_paths
